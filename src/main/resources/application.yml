@@ -1,0 +1,21 @@
+spring:
+    application:
+        name: hrmanager
+    datasource:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/hr_manager?allowPublicKeyRetrieval=true&useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=Europe/Rome&allowPublicKeyRetrieval=true
+        username: root
+        password: 4gm3nt4t10n
+        hikari:
+            maximum-pool-size: 20
+            keepalive-time: 60000
+# Optional: configure connection pool (HikariCP is the default)
+datasource:
+    hikari:
+        minimum-idle: 5
+        maximum-pool-size: 10
+        idle-timeout: 600000
+        pool-name: HikariCP
+        max-lifetime: 1800000
+        connection-timeout: 30000
+        leak-detection-threshold: 2000
